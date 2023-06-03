@@ -1,0 +1,381 @@
+----------DOCUMENT TAGS (Required in every HTML documents) ----------
+1) <!DOCTYPE html>
+    - All HTML Documents must start with <!DOCTYPE> declaration
+    - Technically not HTML tag but info for browser to know what document to expect
+
+2) <html lang = "en"> </html> 
+    - html tag is container for all other html elements, except fro <!DOCTYPE> tag.
+    - 'lang' attribute declared inside this tag to declare language of web page.
+    - assist search engines & browsers
+
+3)  <head> </head>
+    - To place all metadata for webpage (info about html document, not displayed in webpage)
+    - e.g.: Document title, Character set, Page description, Styles, Scripts etc.
+
+4) <title> Webpage title </title>
+    - Text that appears on page tab on browser
+
+5) <body> </body>
+    - Place all visual content of webpage 
+    - e.g.: headings, paragraphs, videos, links, lists, tables etc.
+
+6) <! -- Comment -->
+    - Help developers understand code when reopen after long time
+
+7) <meta charset = "utf-8">
+    - meta tags define information about page
+    - charset allow browser to know which character set to use
+
+8) <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+    - allow page to be responsive to device display size
+
+9) <meta name = "description" content = "Learning Every HTML Tag 2022">
+10) <meta name = "author" content = "QuickCodingTuts">
+    - info will be used by browsers / search engines
+
+11) <meta property = "og:title" content = "HTML Tags 2022">
+<meta property = "og:type" content = "website">
+<meta property = "og:url" content = "https://www.quickcodingtuts.com/index.html">
+<meta property = "og:description" content = "Learning Every HTML Tag 2022">
+    - Open Graph meta tags will be used when page shared to other websites
+    - a lot more opengraph functions, see online resource for more info
+
+12) <link rel = "stylesheet" href = "styles.css">
+    - To import external css sheet to this html
+
+13) <link rel = "icon" href = "favicon.ico">
+    - To import icon for browser tab
+
+---------- CONTENT TAGS (IN <body> </body>) ----------
+1) Header tags
+    a)  <h1> Heading 1 </h1> : largest
+    b)  <h2> Heading 1 </h2> 
+    c)  <h3> Heading 1 </h3> 
+    d)  <h4> Heading 1 </h4> 
+    e)  <h5> Heading 1 </h5> 
+    f)  <h6> Heading 1 </h6> : smallest
+
+2) <p> </p>
+    - paragraph tags
+    - Have 1 blank line inserted before & after them
+
+3) <a href = "https://facebook.com">  Text shown as hyperlink </a>
+    - Link 1 page to another
+    - known as anchor tags
+    - href represents link destination
+    - <a href = "First.html"> First Page </a> : If in same local directory
+
+4) <br/> or <br>
+    - To add a line break
+
+5) <abbr title = "World Health Organization"> WHO </abbr>
+    - Abbreviation tag
+    - Shows WHO as text and shows World Health Organization when hovered to WHO
+
+6)  <cite> Star Wars </cite>
+    - cite tag: to define title of creative work
+    - shown in italics
+    - movie / book / song / painting etc.
+
+7) <blockquote cite = "https://www.citeweb.com"> Desired paragraph of text </blockquote>
+    - Define a block of text quoted from another source
+    - can add cite attribute linking to source
+
+8) <q> Inline quote </q>
+    - inline quotes, adds quotation marks for sentence
+
+9) <kbd> Ctrl </kbd> + <kbd> C</kbd> to copy text.
+    - keyboard input tag
+    - Add a monospace font for text between tags (Give more distinctive look)
+
+10) <code> background-color </code>
+    - code tag for code snippets in html
+    - may be used with JS for JS functions
+
+11) <samp> Press Enter To Continue </samp>
+    - define a sample of computer program
+
+12) <b> Bold text </b> or <strong> Also Bold </strong>
+    - strong for greater importance
+    - bold for drawing attention
+
+13) <small> Not too important text </small>
+
+14) <span class = "class1"> John Smith </span> is my name
+    - span tag used for in-line text
+    - typically used for css styling of specific text in-line
+
+15) <sup> Superscript </sup> | <sub> Subscript </sub>
+    - superscript & subscript
+
+16) <address> Written by <a href = "mailto:leowjianhoong@yahoo.com.sg"> Lucas Leow </a>. <br/> Visit me at: LucasLeow.com </address>
+    - To mark contact information / author of document etc.
+
+17) <ol> : Ordered List shows numbering
+            <li> Item 1 </li>
+            <li> Item 2 </li>
+        </ol>
+
+18) <ul> : Unordered List shows bullet points
+            <li> Item 1 </li>
+            <li> Item 2 </li>
+        </ul>
+
+19) <dl> : Description List (add description (dd) to things (dt))
+        <dt> Coffee </dt>
+            <dd> Black Hot Drink </dd>
+        <dt> Milk </dt>
+            <dd> White Cold Drink </dd>
+    </dl>
+
+20) <data value = "21053"> Cherry tomato </data>
+    - data tag: provides machine readable version of text content
+    - Used in cases where data needs to be in certain format for script processing
+
+21) <del> Striked-out text </del> <ins> Updated Text </ins>
+    - del and ins tag used to strikethrough and underline text
+
+22) <dfn> HTML </dfn> is the standard markup language for creating webpages
+    - definition tag that will be defined in content
+
+23) <em> italic text </em> or use <i> Also italicized </i>
+    - emphasized text (italicized)
+
+24) <hr/>
+    - horizontal line 
+
+25) <mark> Highlighted bright yellow text </mark>
+    - shows text in highlighted bright yellow 
+
+26) <pre> Text in this element preserves both spaces & line breaks </pre>
+    - If any text is spaced or link break in text, it will show in the html
+    - typically used with <code> tag to display code syntax as is
+
+27) <bdo dir = "rtl"> This paragraph go right to left </bdo>
+    - shows text mirrored
+
+28) <bdi> Jerry Cruncher </bdi>
+    - used to isolate part of text that might be formatted in different direction
+    - typically for arabic typography, written from right to left
+
+29) <ruby> Example <rp>(</p> <rt> 345 </rt> <rp>)</rp> </ruby>
+    - ruby tag: small annotation above text to indicate pronunciation or meaning of text
+    - typically used in Japanese symbols
+    - rt tag for explanation (small annotation)
+    - rp tag to provide parenthesis around ruby text
+
+30) <s> Bruce Wayne is Super man </s>
+    - strikethrough to indicate inaccurate text
+
+31) <u> Mispeled words </u>
+    - underline text, typically for mispelled words
+
+32) <var> b </var>
+    - used to mark variables in programming / mathematics
+    - will italicize the text
+
+33) <wbr/>
+    - inserted between long word that should be broken in small screens
+
+---------- ELEMENT TAGS ----------
+1) <div> </div>
+    - most common element used
+    - used to define container on page & separate page into many nested sections as needed
+
+Other helper element tags to segment page:
+2) <nav> </nav> : Define navbar
+3) <header></header> : Define header of page
+4) <footer></footer>  : Define footer of page
+5) <main></main> : Define main body of page
+6) <section></section> : Define a section inside main
+7) <aside></aside> : Post text aside from the main text (default on right side)
+8) <article> </article> To define article sections within main 
+
+9) <canvas> </canvas>
+    - Used to draw graphics, typically in JS
+
+10) <button> Learn More! </button>
+        <button type = "button"> Get Started </button> 
+    - To show text as button (buttons are in line)
+    - Can choose various types of button available & style using CSS
+    - Can even attach links to buttons
+
+11) <details> <summary> Epcot Center </summary> Epcot center is theme park at Walt Disney World </details>
+    - Create expanding widget to show further information about something when clicked on the expand arrow
+    - The text that will not be hidden is within the summary tag
+
+12) <meter value = "2" min = "0" max = "10"> </meter>
+        <span> Storage: </span> <meter value = "60" min = "0" max = "100"></meter>
+    - To display a measurement in terms of meter within a given range
+    - somewhat like thermometer
+
+13) <progress id = "file" value = "32" max = "100"> 32% </progress>
+    - shows progress of a task on page (loading bar)
+
+14) <noscript> Sorry your browser does not support JavaScript! </noscript>
+    - for use if browser disabled JS
+
+15) <svg width = "100" height = "100">
+    <circle cx = "50" cy = "50" r = "40" stroke = "red" stroke-width = "4" fill = "#111"/>
+    </svg>
+        - Draw SVG graphics using code
+        - can draw paths / boxes / other cool stuffs (read online resource)
+
+16) <template> 
+    <h1> Hidden content </h1>
+    </template>
+    - template tag can hide html code from screen when page loads
+    - can be made visible later when needed in JavaScript
+
+17) <time datetime = "2008-02-14 20:00"/> 
+    - time tag defines specific time
+    - datetime attribute converts time into machine-readable format
+    - browser can offer to add date reminders through user's calendar
+    - search engines can produce smarter search results
+
+18) <dialog open> This is an Open Dialog Window </dialog>
+    - absolute positioned element
+    - Will be centered on screen and overlap any existing content
+    - good for placing warning
+
+----- HTML FORM ELEMENTS -----
+1) <form action = "/action_page.php" method = "get> </form>
+    - create HTML form for user input
+    - action and method attributes are just 2 examples (many other examples)
+    - Read more on PHP / other backend language
+
+2) <label for = "username"> Username: </label>
+    <input type = "text" placeholder = "Enter Username Here" id = "username"/>
+    <input type = "email" placeholder = "johndoe@gmail.com" />
+    <input type = "password" placeholder = "Enter Password Here" />
+    <input type = "search" placeholder = "Search..." />
+    <input type = "url" placeholder = "Paste URL here" />
+    <input type = "number" /> : only accepts number
+    <input type = "tel" placeholder = "98765432" />
+    <input type = "checkbox" /> : checkboxes for users
+    <input type = "color" /> : Allow user to select color from color palette
+    <input type = "date" /> :  mm / dd / yyyy date input
+    <input type = "datetime-local" /> : mm/dd/yyyy --: -- -- input
+    <input type = "month" /> 
+    <input type = "week" />
+    <input type = "time" />
+    <input type = "file" /> : Allow user to upload file (Need work from backend to receive file and store somewhere)
+    <input type = "radio" name = "rad" /> : dots for user to select only 1 choice, group dots by specifying same name
+    <input type = "range" /> : Gives functional slider for user to select range
+    <input type = "reset" /> : Clear all data where user had previously entered in form
+    <input type = "submit" /> : Submit button for user to submit data entered in form (require backend to store data)
+    <input type = "image" src = "folder/image.png" /> : User to insert image in form
+        - text input is simplest type
+        - placeholder attribute to give hint on where to input data
+        - By setting input type, it helps to validate form. Other format will not be accepted
+
+3) <textarea rows = "10" cols = "40" placeholder = "Enter Message here"> </textarea>
+    - Provides message box to key in message
+
+4) <fieldset> : creates border around a form
+        <legend> Account Setup  </legend> : Adds short description for form
+            <label for = "fname"> First Name: </label>
+            <input type = "text" id = "fname" name = "fname" />
+    </fieldset>
+
+5) <form>
+        <input list = "browsers" />
+        <datalist id = "browsers">
+            <option value = "Edge"> </option>
+            <option value = "Firefox"> </option>
+            <option value = "Chrome"> </option>
+            <option value = "Safari"> </option>
+        </datalist>
+        <input type = "submit" />
+    </form>
+        - <datalist> allows predefined options for users to select
+        
+6) <label for = "cars"> Choose a car: </label>
+    <select name = "cars" id = "cars">
+        <optgroup label = "Japanese Cars">
+            <option value = "mazda"> Mazda </option>
+            <option value = "mazda"> Honda </option>
+            <option value = "mazda"> Subara </option>
+        </optgroup>
+    </select>
+        - <select> allows for dropdown list with options for user to select, groupable by categories
+
+---------- TABLE TAGS ----------
+<table> : to define the table
+    <caption> : caption for table, always placed right after opening table tag
+        Monthly Savings
+    </caption>
+
+    <thead> : table head tag (To define as the table head)
+        <tr> : To create a row
+            <th> Month </th> : Specify as head column cell
+            <th> Savings </th>
+            <th> Number </th>
+        </tr>
+    </thead>
+ 
+    <tbody> : Define table body
+        <tr> : Specify next row
+            <td> January </td> : Specify as normal column cell
+            <td> $100 </td>
+            <td> 1 </td>
+        </tr>
+    </tbody>
+
+    <tfoot> : Define table footer
+        <tr> : Specify new row
+            <td> Sum </td>
+            <td> $180 </td>
+            <td> 3 </td>
+        </tr>
+    </tfoot>
+
+    <colgroup> : Can be used with <col> tags to style columns
+        <col span = "2" style = "background-color: red;" />
+        <col style = "background-color: yellow;" />
+    </colgroup>
+</table>
+
+---------- MEDIA ELEMENTS ----------
+1) <img src = "imgurl.com" alt = "image description"/>
+    - to place image, style using css
+    - alt attribute for img description in case image cannot load
+
+2) <picture>
+        <source media = "(max-width: 650px)" srcset = "fimgurl.com"/>
+        <img src = "imgurl.com" alt = "truck" style = "width:auto;"/>
+    </picture>
+    - <picture> tag allows multiple image to be nested
+    - image will expand / contract based on display device AR
+
+3) <img src = "imgurl.com" usemap = "#image-map"/>
+    <map name = "image-map> : map is series of coordinates for img which gives img certain shapes. Shapes are actually links, turning img into link
+        <area target = "" alt = "laptop" title = "Laptop" href = "http://desireweb.com" coord = "244,49,506,95,451,384,199,339" shape = "poly"/>
+    </map>
+
+4) <figure> : specifies self-contained content
+        <img src = "imgurl.com"/>
+        <figcaption> Figure 1: An Image </figcaption>
+    </figure>
+
+5) <audio>
+    <source src = "dir/music.mp3" type = "audio/mp3"/>
+    </audio>
+
+6) <video width = "500" height = "280" controls>
+    <source src = "dir/video.mp4" type = "video/mp4"/>
+    <track src = "dir/subtitles.vtt" kind = "subtitles" srclang = "en" label = "English">
+    </video>
+
+7) <iframe width = "500" height = "400" src = "3dbook/index.html"></iframe>
+    - allows embedding of another document into page
+    - can be html | another website | youtube vids | spotify playlists etc.
+    - typically websites provide API to generate iframe URL to be embedded into website
+
+8) <object data = "dir/image.jpg" width = "300"> :deprecated in most browsers.
+9) <embed type = "image/jpg" src = "assets/image.jpg" width = "300" height = "200"/> : also deprecated
+
+
+OTHER TAGS
+- <base> tag: affects links (use with caution)
+- <output> tag: typically used with JS, big topic on own.
