@@ -1,0 +1,174 @@
+Intro to HTML
+
+	Conduit for:
+		- words
+		- images
+		- video
+		- audio
+		- forms
+		- interactive experiences
+		
+-- 1 HTML --
+-- 1-1 Role of HTML --
+	- Hypertext Markup Language
+		- Defines the  content (structure) of a site to the browser
+			- i.e let the browser know what is ur intention for the content placement
+	- No programming logic / loops / functions
+	- declarative (markup) language
+	
+-- 2 Formatting Text --
+
+-- 2-1 Syntax of HTML elements (tags) --
+	- <p> </p> (opening / closing tags)
+		- not all elements have closing tags
+	- syntax is straightforward
+	- tricky part is knowing which to use at where
+	- elements can be nested within each other
+		- nesting forms a tree structure (parents children siblings etc.)
+		- known as the Document Tree (DOM)
+
+	DOM Tree:
+		- Document Object Model
+		- Hierarchy & structure of HTML elements
+		- used for targetting elements in CSS & JS
+		- Browser use DOM tree to create Accessibility tree
+		
+	eg.
+	
+		<article>
+			<h1> This is the headline </h1>
+			<p> The first paragraph </p>
+			<p> The second paragraph </p>
+			<p> The third paragraph which has <em> emphasized text here </em> </p>
+		</article>
+		
+-- 2-3 Headlines --
+	- <h1> to <h6>
+	- when to use which is more important
+		Title: h1
+		Subcontent-title: h2
+		Misc content: h3
+		
+	- most organization already have design specs for site's title to follow
+	- important to distinguish different headers to make site more accessible as well
+	
+-- 2-4 Bold & Italics --
+
+	- 2 for bold
+	- 2 for italic
+	
+		2 types for: (For web accessibility, especially when using screen reader)
+		
+			- visually distinguished <i> / <b>
+				- For items of importance
+					- title of article
+					- title of show
+					- authors of books
+					
+			- verbally emphasized <em> / <strong>
+				- describing things of emphasis
+					- favourite object
+					- most important things
+					- meeting deadline etc.
+					
+	* Both will look similar on page but sound different when user use screen reader
+	* If simply want to bold something, can just use CSS and assign font weight
+		- <b> or <i> or <em> or <strong> is used to indicate to web that something is of importance
+		- recommendation is use as last resort
+		
+-- 2-5 Lists --
+	- can be used to make:
+		- dropdown menus
+		- nav bar
+		- article cards with images
+
+	- Unordered list
+		<ul>
+			<li>Item 1</li>
+			<li>Item 2</li>
+			<li>Item 3</li>
+		</ul>
+		
+	- Ordered list
+		<ol>
+			<li>Item 1</li>
+			<li>Item 2</li>
+			<li>Item 3</li>
+		</ol>
+		s
+	- Definition list
+		- key-value pair
+		<dl>
+			<dt> term 1 (key 1) </dt>
+			<dd> definition 1 </dd>
+			<dd> Additional definition </dd>
+			
+			<dt> term 2 (key 2) </dt>
+			<dd> definition 2 </dd>
+			<dd> Additional definition </dd>
+		</dl>
+
+-- 2-6 Quote tags -- 
+	<q> & <blockquote>
+	
+	<q> : inline quote
+	<blockquote> : block quote
+	
+	- for use when quoting someone
+	
+	<blockquote>
+		<p> content </p>
+		<cite>-Author name </cite>
+	</blockquote>
+		- block element
+	
+	<q> tags: used when someone is have dialogue or quoting something
+		- tailor to each region language
+	Jeremy said <q> You live to fight another day </q>
+		- inline element
+
+
+-- 2-7 Dates & Times --
+
+	<time> May 8 </time>
+	<time> May 8, 2025 </time>
+	
+	<time datetime="2025-05-08"> May 8, 2025 </time>
+		- datetime attribute must be "YYYY-MM-DD" format
+		- datetime attribute for time is 24H format
+			- eg: datetime="15:45-05:00" (15:45 in -5 GMT)
+		- machine readable convention
+		
+	- most sites use timestamps instead of dates
+	
+		<time datetime="2021-20-05">2 days ago</time>
+		<time datetime="20:15-05:00">5 hours ago</time>
+		<time datetime="2020-11-04T19:00"> Wednesday, Nov 4th at 7pm </time>
+		<time datetime="2020-11-04 19:00-0500"> Wednesday, Nov 4th at 7pm </time>
+		
+-- 2-8 Code, pre, br tags --
+	- putting code in webpage
+	
+	<code> {color:green;} </code>
+		- style changes for content between code tags
+	
+	HTML entities (there are a whole bunch available)
+		- &lt; will give '<'
+		- &gt; will give '>'
+			* Can write HTML tags as content
+			
+		eg. <code>&lt;h4&gt; </code> (shows <h4> in content)
+		
+	- <br> : to give breakspace
+	- <pre> : preserve linespace & indentation of HTML content
+	
+		eg.
+		<pre> <!-- Preserves Whitespaces & indentations -->
+		This
+			Content
+					Will
+							Show
+				Like this				
+													
+		in Webpage
+		</pre>
