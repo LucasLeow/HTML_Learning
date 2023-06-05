@@ -451,3 +451,234 @@ Intro to HTML
 	
 	* Therefore, typically <video> tag not used. Typically, utilize embedded video from video hosting service 
 		- eg <iframe>
+
+6-3 Captions & Subtitles
+	- many format for captions
+	- on web, want to use webvtt format for captions
+		- web video text tracks
+			- plain text file with .vtt extension
+			
+			
+	<video>
+		<source src="videourl.webm" type="video/webm"/>
+		<source src="videourl.mp4" type="video/mp4"/>
+		
+		<track src="vttFile.vtt" kind="captions" label="english" srclang="en" default/>
+			- label : provide option for user to select "label" (eg. english) caption
+			- srclang : language of caption
+			- default : default captions for video
+	</video>
+	
+	* Captions in some areas are actually required by law
+	
+6-4 iframes (other medias from hosting services)
+
+	Embedding:
+		- taking content from 1 site to place it as content to other site
+		- all kinds of content possible
+		
+			- map from google
+			- code demo from codepen
+			- slide deck from notist
+			- video from youtube
+			
+		- Utilize someone else's toolkit to embedded their content
+		
+		share -> embedded link 
+		- should have api provide html contentdd
+		
+		* Security concern for iframe content
+			- from reliable sites is ok (like youtube)
+			
+
+-- 7 Identifying Content --
+
+-- 7-1 Languages --
+	- "lang" attribute
+		- to specific language of content
+		- universal attribute
+		
+		lang="es-mx" : spanish & mexico
+		
+	<html lang="en-US">
+	
+	- "charset" attribute
+		- ASCII (128 characters)
+		- Unicode (UTF-8) (1,112,064 characters possible)
+		
+		<meta charset="UTF-8">
+			- added inside <head> element
+			
+
+-- 8 Putting All together --
+
+-- 8-1 HTML page --
+	- html file is served whenever web page request made
+		- homepage: index.html
+		- each other page have its own html file
+			- about.html
+			- purchase.html
+			- chapter1.html
+		- html files are stored in web server database
+		
+		
+		1) doctype declaration: declares which era HTML file is from
+		<!doctype html>
+		<html lang="en-US" dir="ltr">
+			<head>
+				All meta data declaration, will not show in browser
+					- mostly <meta> element here (metadata about page)
+						- <meta charset="utf-8">
+						- <title> Name of tab </title>
+						- <meta name="viewport" content="width=device-width, initial-scale=1">
+							- layout morphed to fit small screens
+							- responsive website
+						- <meta name="description" content="description of this site will show up in Search engine results">
+						
+					Other custom meta data
+					<meta name="application-name" content="LucasWebApp">
+					<meta name="theme-color" content="#247200">
+					
+				<link> tags: to link to external files 
+					- CSS files / JS files
+				<link href="main.css" rel="stylesheet">
+					href: provides link to external file
+					rel: tells browser what kind of asset is external file
+					* Browser loads file in order listed
+						- place top priority files to be loaded at the top
+			</head> 
+			<body>
+				All content goes here
+					<header>
+					</header>
+					<main>
+					</main>
+					<footer>
+					</footer>
+			</body>
+		</html>
+		
+-- 8-3 Structuring body content
+	- main : main content of page (only once)
+	- header : headers (logo , site name, nav)
+	- footer : footers (copyright info, links, terms of service, extra info)
+		- may be displayed at top of page (location on page doesnt really matter)
+		- for purpose of displaying semantic meaning
+	- section : to segregate sections
+		- may have multiple articles within a section describing on a certain section
+	- article : for any instance of article
+		- defines a unit of content
+		- can be standing on its own, a usable thing
+	- aside
+		- for marking off content that is side
+		- not the main attraction but good to note
+		- side bar, side news, additional info for article, advertisement
+		
+* Theres no 1 way to structure HTML correctly
+* Structuring HTML is an art
+* Reference to other website to see how HTML is structured
+
+-- 9 HTML forms --
+
+-- 9-1 Forms basics --
+	
+	<form>
+		<label for="name">Name</label>
+		<input id="name" name="name" type="text">
+		<label for="email">Email</label>
+		<input id="email"name="email" type="email">
+		<button> Submit </button>
+	</form>
+	
+	- for & id attribute to link label & input together
+	- Alternatively, nest input inside label
+	
+	- type attribute in input
+		- to use browser to help ensure certain format is conformed
+		- eg. for type="email", browser expects @abc.com & not gibberish
+		
+	- required attribute: to make the input field compulsory
+	- placeholder attribute: To place example for user to reference input
+	- value attribute: Place in content that is fixed there
+		- i.e prefill certain values that we think might be user's response
+		-	if user want to change, need to manually delete the value
+	
+		<label>
+			Email
+			<input name="email" type="text"></input>
+		</label>
+	
+	<input> tags does not have closing tags (old design element)
+		- specifies an input field where the user can enter data.
+		- have a bunch of attributes to modify the input appearance
+			https://www.w3schools.com/tags/tag_input.asp (for more details)
+		
+			<input type="button">
+			<input type="checkbox">
+			<input type="color">
+			<input type="date">
+			<input type="datetime-local">
+			<input type="email">
+			<input type="file">
+			<input type="hidden">
+			<input type="image">
+			<input type="month">
+			<input type="number">
+			<input type="password">
+			<input type="radio">
+			<input type="range">
+			<input type="reset">
+			<input type="search">
+			<input type="submit">
+			<input type="tel">
+			<input type="text"> (default value)
+			<input type="time">
+			<input type="url">
+			<input type="week">
+			
+			<textarea id="textarea" name="textarea" cols="30" rows="15"></textarea>
+				- to allow user to input bunch of sentences
+				- eg for feedback / additional comments
+
+
+		<input type="file" accept="image/*" multiple>
+			- accept only image files
+			- accept multiple attachments
+			
+			
+-- 10 HTML tables --
+	- <table> : marks up the entire table
+		<tr> : marks up anything on the same row
+		<th> : marks up table header
+		<td> : marks up table data
+		
+		
+		<table>
+			<tr>
+				<th>Col 1 Header</th>
+				<th>Col 2 Header</th>
+				<th>Col 3 Header</th>
+				<th>Col 4 Header</th>
+			</tr>
+			
+			<tr>
+				<td> Col 1 data </td>
+				<td> Col 2 data </td>
+				<td> Col 3 data </td>
+				<td> Col 4 data </td>
+			</tr>
+			
+			<tr>
+				<td> Col 1 data </td>
+				<td> Col 2 data </td>
+				<td> Col 3 data </td>
+				<td> Col 4 data </td>
+			</tr>
+			
+			<tr>
+				<td> Col 1 data </td>
+				<td> Col 2 data </td>
+				<td> Col 3 data </td>
+				<td> Col 4 data </td>
+			</tr>
+		</tabel>
