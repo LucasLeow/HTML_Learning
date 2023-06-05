@@ -172,3 +172,143 @@ Intro to HTML
 													
 		in Webpage
 		</pre>
+		
+-- 2-9 subscripts, superscripts, small-text --
+	<sub></sub>
+	<sup></sup>
+	
+	
+	<small></small> : To convey something that has little prominence
+		- If want to simply make text smaller, use CSS
+		- <small> helps with web accessibility
+		eg: Fine print at bottom of page
+			- copyright logo etc.
+			- cannot leave out but not important
+		
+		
+-- 3 Power of HTML --
+
+-- 3-2 HTML Attributes --
+	
+	- Global Attributes: Attributes applicable to any HTML element
+		- class : For CSS Styling (multiple elements possible)
+		- id : Unique (only for 1 element)
+			- for JS / Page navigation
+		- contenteditable="true"/"false" : Allow user to edit page content
+		- lang="en-GB" : Language
+		- dir="ltr"/"rtl" : left to right or right to left
+	
+-- 3-3 ARIA roles --
+
+	- Also a global attribute (applicable to any element)
+	- attribute that provides accessible information about specific element
+		- provides info for:
+			- screen readers
+			- braille displays
+			- magnifiers
+			- assitive technology
+	- Quite a complex topic, worth looking into to make webpage more accessible
+			
+	Accessibility Tree:
+		- Built from the DOM tree
+		- HTML content -> DOM tree -> Accessibility tree
+		
+			- aria-label : content to be read by assitive tech
+			- aria-hidden="true" : remove content & its children from accessibility tree
+				- only h1 can be seen in eg below, the rest are hidden
+		
+		<h1 aria-label="Hello">
+			<div class="grid" aria-hidden="true">
+				<span>H</span>
+				<span>E</span>
+				<span>L</span>
+				<span>L</span>
+				<span>O</span>
+			</div>
+
+-- 3-4 HTML Formatting --
+
+	1) HTML ignores whitespaces, indentations, returns
+		- unless specific tags used
+			- <pre>
+			- <code>
+			- <textarea>
+			
+	2) HTML comments: <!-- This is a comment -->
+	
+	3) <P> & <p> is the same. Uppercase was used in older versions / browsers
+		- new convention is lowercase
+	
+	4) shorter elements invented in the past, where memory matters
+		- longer elements make code more readable & understandable. memory doesnt matter
+		
+	5) tags may not always have closing tag
+		- <img src=url/> : No closing tag (invented in the past)
+		- newer tags always have closing tags
+		
+	HTML Entities:
+		- to help display content that looks like HTML elements
+		
+		eg:
+		< : &lt;
+		> : &gt;
+		& : &amp;
+		
+		&copy; : Copyright symbol
+		&trade; : TM symbol
+		&star; : star symbol
+		
+		Jen&nbsp;Simmons <- Jen Simmons will always stay together on same line
+			- can also be used to create " ".
+			- Jen  Simmons will not be processed by browser
+			- Jen nbsp;nbsp; Simmons will show the 2 whitespace
+		
+-- 4 Links in HTML --
+
+-- 4-1 Links --
+	- Anchor tag:
+		- <a href="page.html">Link name on page</a>
+			- href: hypertext reference
+			- in-line element
+			
+	- Can put image as clickable link:
+	
+		<a href="http:google.com">
+			<img src="googlelogo.png"/>
+		</a>
+		
+		Absolute URL:
+			- Pointing to a point in web
+			- must include http:// / https://
+				- Hypertext Transfer Protocol (Secure) https
+				
+-- 4-2 URL paths --
+
+	Relative URL:
+		* Relative to the current file we are writing the path in
+		
+		eg:
+			- /about
+			- /purchases
+			- /about/contact
+			- ./blog/march-9.html (./ means current directory)
+			
+		* URLs affect SEO
+		
+-- 4-3 Navigation --
+
+	- most common technique for creating menu / navbar
+	- using <nav></nav< element
+		- for marking up navigation
+		- tells browser which sets of links are part of site navigation
+		
+		
+		<nav role="navigation" aria-label="main menu">
+			- ARIA role for main navigation for site
+			
+			
+		<footer></footer>
+			- Privacy Policy
+			- Terms of Service
+			- Contact us
+			
