@@ -311,4 +311,143 @@ Intro to HTML
 			- Privacy Policy
 			- Terms of Service
 			- Contact us
+
+-- 5 Images --
+
+-- 5-1 Images -- 
+	<img src=url alt="description" width="400" height="300"/>
+		- src
+		- alt: sub for img when img cannot be seen
+		- width (px implied)
+		- height
+			- tell browser how large img is, making it load faster
 			
+-- 5-2 img file format --
+	- Goal: High Quality + Lowest file size
+		- .gif: 
+			- larges areas of single color
+			- limited color space : 256 colors
+			- can have multiple frames for small movies
+			
+		- .svg (scalable vector graphics) (actl a programming language for graphics)
+			- good for logos, icons 
+			- vector file
+			- instructions for a drawing
+			- can be scaled large / small without losing quality
+			- makes file size very small
+			
+		- .jpg
+			- good for compressing photographs
+			- can pick balance between size & quality
+		
+		- .png
+			- newer format for web than gis & jpg
+			- good for photos that need transparency
+
+-- 5-3 Responsive images --
+
+	- based on different devices
+	- high resolution data consumes more data bandwidth
+	- mobile phone vs large high res desktop
+	
+	
+	Solution:
+		- have multiple of same image in different resolution
+		- browser will select image accordingly based on
+			- data bandwidth
+			- screen size
+			- internet speed 
+			etc.
+			
+			
+		<img src = "default" alt="description" width="480" height="360"
+		
+		srcset="res1_image, res2_image, res3_img"
+		sizes="(max-width: 480px) 240px,
+		(max-width: 960px) 480px"
+
+		/>
+		
+	- srcset attribute: A bunch of URL that links to same image of different resolution
+	- "sizes" attribute: how much of viewport width to show img, after given breakpoints
+
+
+-- 5-5 Responsive picture --
+	- To show different parts of a picture based on viewport
+	- using picture tag
+	
+	<picture>
+		<source media="(min-width:600px)" srcset="enlarge.url"
+		<source srcset="cropped.url"
+		<img src="original.url" alt="description" width="480" height="360/>
+	</picture>
+	
+* Downside: Must download all img specified in the srcset
+	- wastage of memory
+* typically 1 large image upload then picture resized accordingly
+	
+-- 5-6 Figures & Figcaption -- 
+
+	<figure>
+		<img src="img.url" alt="description" height="480" width="360"/>
+		<figcaption>A blackdog sunbathing</figcaption>
+	</figure>
+	
+	- provides semantic info for browser
+		- improves accessibility
+		- improves SEO (r/s b/w caption & img) (keywords)
+
+-- 6 Media --
+
+-- 6-1 Audio --
+	<audio></audio> to put audio in webpage (audio player interface)
+		- has open & close tag
+	
+	<audio src="audio-url" controls></audio> 
+		- controls attribute provides built-in control 
+		- loop attribute: auto replay
+		- autoplay attribute: plays automatically when browser loads
+			- not all ppl like autoplaying
+			
+		<audio> /
+			<source src="audio.ogg" type="audio/ogg"/>
+			<source src="audio.mp3" type="audio/mpeg"/>
+		</audio>
+			- allow to put in multiple source, let browser choose suitable format
+			- browser choose first file it understands
+			
+		Types of audio formats:
+			- mp3
+			- ogg
+			- wav
+			
+-- 6-2 Video --
+	<video></video> tag
+	
+	<video src="videourl" controls></video>
+	
+	- h.264 codec: Widest support across all browser
+		- not opensource
+		- fees to use
+		- but widely used
+		
+		
+		- have bunch of video codecs supported
+			- Real Video
+			- Sorenson
+			- Windows Media
+			- FLV
+			- H.263
+			
+	<video>
+		<source src="videourl.webm" type="video/webm"/>
+		<source src="videourl.mp4" type="video/mp4"/>
+	</video>
+		- browser will play first file it understands
+		
+	Adaptive Bitrate Streaming
+		- video resolution changes based on internet bandwidth / speed
+		- complicated, requires server farm of transcoding robots
+	
+	* Therefore, typically <video> tag not used. Typically, utilize embedded video from video hosting service 
+		- eg <iframe>
