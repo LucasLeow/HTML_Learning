@@ -1,0 +1,43 @@
+-- Intro --
+	- Semantic HTML
+		- Meaning behind its element
+		- What is each bit of content structurally speaking
+		
+	- Accessible websites
+		- semantic, meaningful HTML
+		- leveraging all available meaningful HTML tags
+		- Not just using <div> & <span> tags
+		
+	* Lawsuit may occur due to inaccessible website 
+	
+	HTML Concept
+		- About identifying types of content on webpage
+		- not scaffolding for hanging CSS classes & JS events
+		
+-- 1 Convert Content to Semantic HTML Markup --
+
+	- Before building website
+	- Look at text & content provided
+	
+	Typically, word document provided
+		- headings
+		- bold texts
+		
+
+-- 1-2  Step 1: Identifying Major elements in provided content --
+	- critical tags that help structure document
+	
+		- header
+		- section
+			- groups related content together
+			- may have multiple articles / paragraphs within 1 section
+				- so long as related
+		- <article>
+			- typically only 1 article per page content
+		- aside
+			- supports the webpage (helpful info that is unrelated to main content)
+			- if aside not there, will not lose the fundamental / core idea of web page
+			
+			
+			
+-- 1-3 Step 2: Identify headings & paragraphs

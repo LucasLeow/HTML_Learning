@@ -46,6 +46,7 @@
 13) <link rel = "icon" href = "favicon.ico">
     - To import icon for browser tab
 
+
 ---------- CONTENT TAGS (IN <body> </body>) ----------
 1) Header tags
     a)  <h1> Heading 1 </h1> : largest
